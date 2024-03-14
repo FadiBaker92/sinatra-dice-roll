@@ -12,7 +12,7 @@ get("/hello") do
 end
 
 get("/") do 
-  erb(:elephant , {:layout => :wrapper})
+  erb(:elephant)
 end
 
 
@@ -21,7 +21,7 @@ get("/dice/2/6") do
   second_dice = rand(1..6)
   sum = first_dice + second_dice
   @outcome = "You rolled #{first_dice} and #{second_dice} and the sum is #{sum}"
-  erb(:two_six, {:layout => :wrapper})
+  erb(:two_six)
 end
 
 get("/dice/2/10") do 
@@ -29,13 +29,13 @@ get("/dice/2/10") do
   second_dice = rand(1..10)
   sum = first_dice + second_dice
   @outcome = "You rolled #{first_dice} and #{second_dice} and the sum is #{sum}"
-  erb(:two_ten, {:layout => :wrapper})
+  erb(:two_ten)
 end
 
   get("/dice/1/20") do
     first_dice = rand(1..20)
     @outcome = "You rolled #{first_dice}"
-   erb(:one_twenty, {:layout => :wrapper})
+   erb(:one_twenty)
   end
 
   get("/dice/5/4") do 
@@ -46,6 +46,6 @@ end
     dice_5 = rand(1..4)
     sum = dice_1 + dice_2 + dice_3 + dice_4 + dice_5
     @outcome = "You rolled #{dice_1}, #{dice_2}, #{dice_3}, #{dice_4} and #{dice_5} and the sum is #{sum}"
-    erb(:five_four, {:layout => :wrapper})
+    erb(:five_four,)
 
   end
