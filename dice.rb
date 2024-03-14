@@ -33,8 +33,8 @@ get("/dice/2/10") do
 end
 
   get("/dice/1/20") do
-    first_dice = rand(1..20)
-    @outcome = "You rolled #{first_dice}"
+    @first_dice = rand(1..20)
+    @outcome = "You rolled #{@first_dice}"
    erb(:one_twenty)
   end
 
