@@ -46,6 +46,14 @@ end
     dice_5 = rand(1..4)
     sum = dice_1 + dice_2 + dice_3 + dice_4 + dice_5
     @outcome = "You rolled #{dice_1}, #{dice_2}, #{dice_3}, #{dice_4} and #{dice_5} and the sum is #{sum}"
-    erb(:five_four,)
+    erb(:five_four)
+  end
 
+  get("/dice/100/6") do
+    @rolls = []
+    100.times do 
+      dice = rand(1..6)
+      @rolls.push(dice)
+    end
+    erb(:one_hundred_six)
   end
