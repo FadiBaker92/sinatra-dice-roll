@@ -1,5 +1,12 @@
   
   <h1>2d6</h1>
-  <p> <%= @outcome %> </p>
+ 
+ <ul>
+  <% @roll.each do |each_roll| %>
+    <li>
+    <%= each_roll %>
+    </li>
+  <% end %>
+ </ul>
 
   

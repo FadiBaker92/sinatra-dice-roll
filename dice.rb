@@ -17,35 +17,42 @@ end
 
 
 get("/dice/2/6") do
-  first_dice = rand(1..6)
-  second_dice = rand(1..6)
-  sum = first_dice + second_dice
-  @outcome = "You rolled #{first_dice} and #{second_dice} and the sum is #{sum}"
+  @roll = []
+  2.times do
+    dice = rand(1..6)
+    @roll.push(dice)
+  end
+
   erb(:two_six)
 end
 
 get("/dice/2/10") do 
-  first_dice = rand(1..10)
-  second_dice = rand(1..10)
-  sum = first_dice + second_dice
-  @outcome = "You rolled #{first_dice} and #{second_dice} and the sum is #{sum}"
+  @roll = []
+  2.times do 
+    dice = rand(1..10)
+    @roll.push(dice)
+  end
+
   erb(:two_ten)
 end
 
   get("/dice/1/20") do
-    @first_dice = rand(1..20)
-    @outcome = "You rolled #{@first_dice}"
+    @roll = []
+    1.times do   
+      dice = rand(1..20)
+      @roll.push(dice)
+    end
+    
    erb(:one_twenty)
   end
 
   get("/dice/5/4") do 
-    dice_1 = rand(1..4)
-    dice_2 = rand(1..4)
-    dice_3 = rand(1..4)
-    dice_4 = rand(1..4)
-    dice_5 = rand(1..4)
-    sum = dice_1 + dice_2 + dice_3 + dice_4 + dice_5
-    @outcome = "You rolled #{dice_1}, #{dice_2}, #{dice_3}, #{dice_4} and #{dice_5} and the sum is #{sum}"
+    @roll = []
+    5.times do
+      dice = rand(1..4)
+      @roll.push(dice)
+    end
+
     erb(:five_four)
   end
 
@@ -55,5 +62,6 @@ end
       dice = rand(1..6)
       @rolls.push(dice)
     end
+
     erb(:one_hundred_six)
   end

@@ -1,4 +1,9 @@
-
-
-    <h1>2d10</h1>
-    <p> <%= @outcome %> </p>
+<h1>2d10</h1>
+    
+<ul>
+    <% @roll.each do |each_roll|%>
+     <li>
+        <%= each_roll %>
+     </li>
+    <% end %>
+</ul>

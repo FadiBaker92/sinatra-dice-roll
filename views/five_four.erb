@@ -1,5 +1,13 @@
 
   <h1>5d4</h1>
-  <p> <%= @outcome %> </p>
+  <ul>
+    <% @roll.each do |each_dice| %>
+      <li>
+       <%= each_dice %> 
+      </li>
+    <% end %>
+
+  </ul>
+
    
    
